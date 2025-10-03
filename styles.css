@@ -20,7 +20,7 @@ body {
 
 /* Header Styles */
 .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00B894 0%, #74B9FF 100%);
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -77,10 +77,21 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00B894 0%, #74B9FF 100%);
     color: white;
     padding: 120px 0 80px;
-    text-align: center;
+}
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 400px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
 }
 
 .hero-content h2 {
@@ -93,6 +104,21 @@ body {
     font-size: 1.2rem;
     margin-bottom: 40px;
     opacity: 0.9;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    background: transparent;
 }
 
 .hero-buttons {
@@ -146,9 +172,17 @@ body {
     color: white;
 }
 
+.btn-whatsapp-small i {
+    color: white !important;
+}
+
 .btn-whatsapp-small:hover {
     background: #128C7E;
     transform: translateY(-2px);
+}
+
+.btn-whatsapp-small:hover i {
+    color: white !important;
 }
 
 .btn-large {
@@ -192,7 +226,7 @@ body {
 
 .service-card i {
     font-size: 3rem;
-    color: #667eea;
+    color: #6ecab4ff;
     margin-bottom: 20px;
 }
 
@@ -313,7 +347,7 @@ body {
 }
 
 .contact-item i {
-    color: #667eea;
+    color: #6dafd2ff;
     font-size: 1.2rem;
     width: 20px;
 }
@@ -347,7 +381,7 @@ body {
 .contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #66eaddff;
 }
 
 .whatsapp-section {
@@ -460,6 +494,16 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
     .hero-content h2 {
         font-size: 2rem;
     }
@@ -467,6 +511,10 @@ body {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .hero-img {
+        max-height: 300px;
     }
     
     .contact-content {
