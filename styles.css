@@ -48,7 +48,6 @@ body {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    background: white;
     padding: 5px;
 }
 
@@ -193,7 +192,12 @@ body {
 /* Services Section */
 .services {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: 
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), /* capa blanca semitransparente */
+        url('MujerConCinta.jpg'); /* ← aquí pones la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* efecto parallax opcional */
 }
 
 .services h2 {

@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetPosition = targetSection.offsetTop - headerHeight;
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'smooth'
                 });
             }
         });
@@ -44,7 +43,7 @@ Me gustaría obtener más información sobre sus servicios de lipólisis a domic
             
             // Encode message for URL
             const encodedMessage = encodeURIComponent(whatsappMessage);
-            const whatsappURL = `https://wa.me/+573001234567?text=${encodedMessage}`;
+            const whatsappURL = `https://wa.me/+573102719284?text=${encodedMessage}`;
             
             // Open WhatsApp
             window.open(whatsappURL, '_blank');
@@ -58,22 +57,22 @@ Me gustaría obtener más información sobre sus servicios de lipólisis a domic
     }
 
     // Header scroll effect
-    const header = document.querySelector('.header');
-    let lastScrollTop = 0;
+    //const header = document.querySelector('.header');
+    //let lastScrollTop = 0;
     
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //window.addEventListener('scroll', function() {
+    //    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > 100) {
-            header.style.background = 'rgba(102, 126, 234, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
-        } else {
-            header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-            header.style.backdropFilter = 'none';
-        }
+    //    if (scrollTop > 100) {
+    //        header.style.background = 'rgba(102, 126, 234, 0.95)';
+    //       header.style.backdropFilter = 'blur(10px)';
+    //   } else {
+    //       header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+    //        header.style.backdropFilter = 'none';
+    //    }
         
-        lastScrollTop = scrollTop;
-    });
+    //    lastScrollTop = scrollTop;
+    //});
 
     // Animate elements on scroll
     const observerOptions = {
