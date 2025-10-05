@@ -195,22 +195,43 @@
                 </div>
                 <div class="contact-form">
                     <h3>Envíanos un mensaje</h3>
-                    <form>
-                        <input type="text" placeholder="Nombre completo" required>
-                        <input type="email" placeholder="Correo electrónico" required>
-                        <input type="tel" placeholder="Teléfono" required>
-                        <select required>
-                            <option value="">Selecciona un servicio</option>
-                            <option value="corporales">Corporales</option>
-                            <option value="lipolisis-laser">Lipólisis Láser</option>
-                            <option value="marcacion-corporal">Marcación Corporal</option>
-                            <option value="faciales">Faciales</option>
-                            <option value="prp">Plasma Rico en Plaquetas (PRP)</option>
-                            <option value="consultas">Consultas</option>
-                            <option value="valoracion-virtual">Valoración Virtual / Personalizada</option>
-                        </select>
-                        <textarea placeholder="Mensaje" rows="4" required></textarea>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    <form id="contactForm" novalidate>
+                        <div class="form-grid">
+                            <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" 
+                                    required minlength="3" maxlength="50" 
+                                    pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" 
+                                    placeholder="Ej: Juan Pérez">
+                            <span class="error-message">Ingresa un nombre válido (solo letras).</span>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" 
+                                    required placeholder="ejemplo@gmail.com">
+                            <span class="error-message">Por favor, ingresa un correo válido.</span>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" 
+                                    pattern="^[0-9]{10}$" 
+                                    required placeholder="Ej: 3001234567">
+                            <span class="error-message">Debe contener exactamente 10 números.</span>
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="mensaje">Mensaje (opcional)</label>
+                                <textarea id="mensaje" name="mensaje" minlength="10" maxlength="300"
+                                            placeholder="Escribe tu mensaje "></textarea>
+                                <span class="error-message">Si escribes un mensaje, debe tener al menos 10 caracteres.</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Enviar por WhatsApp</button>
+                        <p class="form-feedback success">✅ ¡Redirigiendo a WhatsApp!</p>
+                        <p class="form-feedback error">❌ Por favor completa correctamente todos los campos obligatorios.</p>
                     </form>
                 </div>
             </div>

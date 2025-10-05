@@ -148,6 +148,61 @@ function formatPhoneNumber(phone) {
     return cleaned;
 }
 
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+    const inputs = this.querySelectorAll("input, textarea");
+    const success = document.querySelector(".form-feedback.success");
+    const error = document.querySelector(".form-feedback.error");
+
+    inputs.forEach(input => {
+    const errorMsg = input.nextElementSibling;
+
+    // El campo "mensaje" es opcional, pero si se escribe algo, debe tener al menos 10 caracteres
+    if (input.id === "mensaje" && input.value.trim() === "") {
+        input.classList.remove("invalid");
+        if (errorMsg) errorMsg.style.display = "none";
+        return;
+    }
+
+    if (!input.checkValidity()) {
+        input.classList.add("invalid");
+        if (errorMsg) errorMsg.style.display = "block";
+        isValid = false;
+    } else {
+        input.classList.remove("invalid");
+        if (errorMsg) errorMsg.style.display = "none";
+    }
+    });
+
+    if (isValid) {
+    const nombre = document.getElementById("nombre").value.trim();
+    const correo = document.getElementById("email").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim() || "(sin mensaje)";
+
+    const phoneNumber = "573102719284"; // 👈 CAMBIA este número por el tuyo
+    const text = `Hola, soy ${nombre}.%0A📧 Correo: ${correo}%0A📱 Teléfono: ${telefono}%0A💬 Mensaje: ${mensaje}`;
+    const url = `https://wa.me/${phoneNumber}?text=${text}`;
+
+    success.style.display = "block";
+    error.style.display = "none";
+
+    // pequeña pausa visual antes de redirigir
+    setTimeout(() => {
+        window.open(url, "_blank");
+        form.reset();
+        success.style.display = "none";
+    }, 80);
+    } else {
+    success.style.display = "none";
+    error.style.display = "block";
+    }
+});
+
 // WhatsApp link generator
 function generateWhatsAppLink(phone, message) {
     const formattedPhone = formatPhoneNumber(phone);
