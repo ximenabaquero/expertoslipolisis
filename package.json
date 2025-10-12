@@ -1,0 +1,20 @@
+{
+  "name": "expertoslipolisis",
+  "version": "1.0.0",
+  "description": "started 13 sep 25",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ximenabaquero/expertoslipolisis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ximenabaquero/expertoslipolisis/issues"
+  },
+  "homepage": "https://github.com/ximenabaquero/expertoslipolisis#readme"
+}
