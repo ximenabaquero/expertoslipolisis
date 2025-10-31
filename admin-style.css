@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* 1. Estilos del HEADER */
+.header {
+  background: linear-gradient(135deg, #00b894 0%, #74b9ff 100%);
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 2. Estilos del panel principal y formulario de LOGIN */
+
+/* Contenedor principal para centrar el formulario de login */
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.hero-content {
+  max-width: 450px;
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hero-content h2 {
+  color: #00b894;
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+
+.hero-content p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* 3. Estilos del Formulario */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #00b894;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 184, 148, 0.2);
+}
+
+/* 4. Estilos del Botón */
+.btn-primary {
+  background: #00b894;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background: #009975;
+  transform: translateY(-1px);
+}
+
+/* Feedback de error */
+.form-feedback.error {
+  color: #e74c3c;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* 5. Estilos del FOOTER */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #333;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* ================= GESTIÓN DE IMÁGENES ================= */
+.gestion-imagenes {
+  padding: 100px 40px 60px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.top-bar h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.add-card-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.add-card-btn:hover {
+  background-color: #1d4ed8;
+}

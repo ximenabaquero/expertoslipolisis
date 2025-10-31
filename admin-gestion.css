@@ -1,0 +1,198 @@
+/* ======= CONTENEDOR DE TARJETAS ======= */
+#cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+/* ======= TARJETA INDIVIDUAL ======= */
+.result-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: 370px;
+  padding: 20px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ======= SECCIÓN ANTES / DESPUÉS ======= */
+.before-after {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* ======= RECUADRO DE IMAGEN ======= */
+.image-placeholder {
+  position: relative;
+  width: 48%;
+  height: 180px;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  background: #fafafa;
+  transition: border-color 0.2s ease;
+}
+
+.image-placeholder:hover {
+  border-color: #9ca3af;
+}
+
+/* ======= ETIQUETAS “Antes” y “Después” ======= */
+.image-placeholder.before::before,
+.image-placeholder.after::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+.image-placeholder.before::before {
+  content: "Antes";
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.image-placeholder.after::before {
+  content: "Después";
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+/* ======= LABEL DE SUBIDA ======= */
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.upload-label::before {
+  font-size: 1.6rem;
+  opacity: 0.8;
+}
+
+.file-input {
+  display: none;
+}
+
+/* ======= IMÁGENES MOSTRADAS ======= */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.remove-image {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ef4444;
+  font-weight: bold;
+}
+
+/* ======= CAMPO DE DESCRIPCIÓN ======= */
+.desc-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.desc-row label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.desc-row input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  background: #f9fafb;
+  transition: border-color 0.2s ease;
+}
+
+.desc-row input:focus {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+/* ======= BOTONES DE ACCIÓN ======= */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn-upload,
+.btn-delete {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-upload {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-upload:hover {
+  background-color: #2563eb;
+  transform: scale(1.02);
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+  transform: scale(1.02);
+}
